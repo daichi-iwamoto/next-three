@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
+import styles from '../styles/Home.module.css'
 
 const Box = () => {
   const ref = useRef()
@@ -21,11 +22,21 @@ const Box = () => {
 
 const ThreeDemoPage = () => {
   return (
-    <Canvas>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Box />
-    </Canvas>
+    <main className={styles.main}>
+      <header>
+        <h1 className={styles.title}>
+          Three.js Demo Page
+        </h1>
+      </header>
+      <section className={styles.card}>
+        <h2>demo01</h2>
+        <Canvas>
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <Box />
+        </Canvas>
+      </section>
+    </main>
   )
 }
 
