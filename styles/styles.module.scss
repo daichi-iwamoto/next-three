@@ -1,0 +1,77 @@
+.main {
+  margin: 0;
+  padding: 15px 35px;
+}
+
+.title {
+  margin: 30px 0 50px;
+  line-height: 1.15;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.demosSec {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.demoSec {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 800px;
+  margin: 30px 20px;
+  border: 1px solid #19171c;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    color: #19171c;
+    padding: 20px 0;
+    margin: 0;
+    border-bottom: solid 1px #19171c;
+  }
+}
+
+.demoContents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.canvasBox {
+  display: flex;
+  width: 300px;
+}
+
+.demoCode {
+  width: 500px;
+  height: auto;
+  margin: 0;
+}
+
+.demoMemo {
+  width: 100%;
+  padding: 30px 30px 10px;
+  border-top: solid 1px #19171c;
+  margin: 0;
+  position: relative;
+
+  code {
+    color: #0076ff;
+    font-weight: bold;
+    padding: 0 3px;
+  }
+}
+
+.demoMemo::before {
+  content: "Memo";
+  padding: 5px 10px;
+  background: #19171c;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
