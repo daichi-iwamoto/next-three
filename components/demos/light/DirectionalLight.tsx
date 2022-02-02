@@ -5,12 +5,14 @@ import { CameraController } from 'components/utils/orbit-controls'
 import { Ground } from 'components/utils/ground'
 import { styles } from 'components/styles'
 
-const AnbientLight = () => {  
+const DirectionalLight = () => {  
   return (
     <Canvas>
       <CameraController />
-      <ambientLight
+      <ambientLight intensity={0.2} />
+      <directionalLight
         intensity={1}
+        color='#d63031'
       />
       <mesh scale={1}>
         <torusGeometry args={[3, 1, 16, 100]}/>
@@ -21,14 +23,16 @@ const AnbientLight = () => {
   )
 }
 
-export const AnbientLightComponent = () => {
+export const DirectionalLightComponent = () => {
   const codeString = `
-  const AnbientLight = () => {  
+  const DirectionalLight = () => {  
     return (
       <Canvas>
         <CameraController />
-        <ambientLight
+        <ambientLight intensity={0.2} />
+        <directionalLight
           intensity={1}
+          color='#d63031'
         />
         <mesh scale={1}>
           <torusGeometry args={[3, 1, 16, 100]}/>
@@ -42,10 +46,10 @@ export const AnbientLightComponent = () => {
 
   return (
     <section className={styles.demoSec}>
-      <h2>AnbientLight</h2>
+      <h2>DirectionalLight</h2>
       <div className={styles.demoContents}>
         <div className={styles.canvasBox}>
-          <AnbientLight />
+          <DirectionalLight />
         </div>
         <SyntaxHighlighter className={styles.demoCode} language="javascript" style={atelierCaveDark}>
           {codeString}
@@ -53,8 +57,10 @@ export const AnbientLightComponent = () => {
       </div>
       <div className={styles.demoMemo}>
         <p>
-          均一にジオメトリを照らすライト<br />
-          均一なので影や反射がつかない
+          平行光源<br />
+          めちゃくちゃ遠くから当たっている光、現実世界での太陽のようなイメージ<br />
+          デフォルトでは真上から光が当たるが、真下からみた場合真っ黒になってしまうので<br />
+          <code>anbientLight</code>と併用する事が多い
         </p>
       </div>
     </section>

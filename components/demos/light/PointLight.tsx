@@ -5,12 +5,18 @@ import { CameraController } from 'components/utils/orbit-controls'
 import { Ground } from 'components/utils/ground'
 import { styles } from 'components/styles'
 
-const AnbientLight = () => {  
+const PointLight = () => {  
   return (
     <Canvas>
       <CameraController />
-      <ambientLight
-        intensity={1}
+      <pointLight
+        args={[
+          '#6c5ce7',    // color: 光の色
+          1,            // intensity: 光の強さ
+          10,           // distance: 光の届く距離
+          1,            // decay: 光の減衰量
+        ]}
+        position={[0, 5, 5]}
       />
       <mesh scale={1}>
         <torusGeometry args={[3, 1, 16, 100]}/>
@@ -21,14 +27,20 @@ const AnbientLight = () => {
   )
 }
 
-export const AnbientLightComponent = () => {
+export const PointLightComponent = () => {
   const codeString = `
-  const AnbientLight = () => {  
+  const PointLight = () => {  
     return (
       <Canvas>
         <CameraController />
-        <ambientLight
-          intensity={1}
+        <pointLight
+          args={[
+            '#6c5ce7',    // color: 光の色
+            1,            // intensity: 光の強さ
+            10,           // distance: 光の届く距離
+            1,            // decay: 光の減衰量
+          ]}
+          position={[0, 5, 5]}
         />
         <mesh scale={1}>
           <torusGeometry args={[3, 1, 16, 100]}/>
@@ -42,10 +54,10 @@ export const AnbientLightComponent = () => {
 
   return (
     <section className={styles.demoSec}>
-      <h2>AnbientLight</h2>
+      <h2>PointLight</h2>
       <div className={styles.demoContents}>
         <div className={styles.canvasBox}>
-          <AnbientLight />
+          <PointLight />
         </div>
         <SyntaxHighlighter className={styles.demoCode} language="javascript" style={atelierCaveDark}>
           {codeString}
@@ -53,8 +65,8 @@ export const AnbientLightComponent = () => {
       </div>
       <div className={styles.demoMemo}>
         <p>
-          均一にジオメトリを照らすライト<br />
-          均一なので影や反射がつかない
+          豆電球の様なイメージの光源<br />
+          デフォルトでは原点に設置されるためポジションを変更して使用する事が多い
         </p>
       </div>
     </section>

@@ -5,12 +5,16 @@ import { CameraController } from 'components/utils/orbit-controls'
 import { Ground } from 'components/utils/ground'
 import { styles } from 'components/styles'
 
-const AnbientLight = () => {  
+const HemisphereLight = () => {  
   return (
     <Canvas>
       <CameraController />
-      <ambientLight
-        intensity={1}
+      <hemisphereLight
+        args={[
+          '#ffeaa7',    // 光が当たっている箇所の色
+          '#6c5ce7',    // 光が当たっていない箇所の色
+          1             // 光の強さ
+        ]}
       />
       <mesh scale={1}>
         <torusGeometry args={[3, 1, 16, 100]}/>
@@ -21,14 +25,18 @@ const AnbientLight = () => {
   )
 }
 
-export const AnbientLightComponent = () => {
+export const HemisphereLightComponent = () => {
   const codeString = `
-  const AnbientLight = () => {  
+  const HemisphereLight = () => {  
     return (
       <Canvas>
         <CameraController />
-        <ambientLight
-          intensity={1}
+        <hemisphereLight
+          args={[
+            '#ffeaa7',    // 光が当たっている箇所の色
+            '#6c5ce7',    // 光が当たっていない箇所の色
+            1             // 光の強さ
+          ]}
         />
         <mesh scale={1}>
           <torusGeometry args={[3, 1, 16, 100]}/>
@@ -42,10 +50,10 @@ export const AnbientLightComponent = () => {
 
   return (
     <section className={styles.demoSec}>
-      <h2>AnbientLight</h2>
+      <h2>HemisphereLight</h2>
       <div className={styles.demoContents}>
         <div className={styles.canvasBox}>
-          <AnbientLight />
+          <HemisphereLight />
         </div>
         <SyntaxHighlighter className={styles.demoCode} language="javascript" style={atelierCaveDark}>
           {codeString}
@@ -53,8 +61,7 @@ export const AnbientLightComponent = () => {
       </div>
       <div className={styles.demoMemo}>
         <p>
-          均一にジオメトリを照らすライト<br />
-          均一なので影や反射がつかない
+          光が当たっている場所と当たっていない場所の色指定ができるライト
         </p>
       </div>
     </section>
