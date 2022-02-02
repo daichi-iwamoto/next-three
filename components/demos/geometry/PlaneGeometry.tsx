@@ -1,12 +1,14 @@
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atelierCaveDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-
-import { styles } from 'components/styles'
 import { Canvas } from '@react-three/fiber'
+
+import { CameraController } from 'components/utils/orbit-controls'
+import { styles } from 'components/styles'
 
 const PlaneGeometry = () => {
   return (
     <Canvas>
+      <CameraController />
       <mesh scale={1}>
         <planeGeometry
           args={[
@@ -28,6 +30,7 @@ export const PlaneGeometryComponent = () => {
   const PlaneGeometry = () => {
     return (
       <Canvas>
+        <CameraController />
         <mesh scale={1}>
           <planeGeometry
             args={[
