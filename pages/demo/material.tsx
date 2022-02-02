@@ -2,6 +2,7 @@ import { styles } from 'components/styles'
 import { MeshBasicMaterialComponent } from 'components/demos/material/MeshBasicMaterial'
 import { MeshNormalMaterialComponent } from 'components/demos/material/MeshNormalMaterial'
 import { MeshStandardMaterialComponent } from 'components/demos/material/MeshStandardMaterial'
+import { MeshPhongMaterialComponent } from 'components/demos/material/MeshPhongMaterial'
 
 const ThreeDemoPage = () => {
   return (
@@ -15,6 +16,7 @@ const ThreeDemoPage = () => {
         <MeshBasicMaterialComponent />
         <MeshNormalMaterialComponent />
         <MeshStandardMaterialComponent />
+        <MeshPhongMaterialComponent />
       </div>
     </main>
   )
