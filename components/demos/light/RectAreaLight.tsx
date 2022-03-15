@@ -66,7 +66,7 @@ export const RectAreaLightComponent = () => {
       <div className={styles.demoMemo}>
         <p>
           単一方向を照らす四角形のライト<br />
-          <code>MeshStandardMaterial</code>か<code>MeshPhysicalMaterial</code>にしか使えない
+          <code>MeshStandardMaterial</code>か<code>MeshPhysicalMaterial</code>にしか使えないライトです
         </p>
       </div>
     </section>

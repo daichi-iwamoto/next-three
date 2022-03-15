@@ -65,8 +65,10 @@ export const SphereGeometryComponent = () => {
       </div>
       <div className={styles.demoMemo}>
         <p>
-          相当特殊な場合でなければ、基本的には上3つのプロパティ以外指定しない。<br />
-          <code>widthSegments</code>の最大値は<code>64</code>、<code>heightSegments</code>の最大値は<code>32</code>
+          球体を指定するジオメトリです<br />
+          基本的には上3つのプロパティ以外は指定しないかもしれませんが<br />
+          <code>Start</code>の位置や<code>Length</code>を変える事で、半球を指定したりもできます<br />
+          面の粒度を表す<code>widthSegments</code>の最大値は<code>64</code>、<code>heightSegments</code>の最大値は<code>32</code>になっています
         </p>
       </div>
     </section>

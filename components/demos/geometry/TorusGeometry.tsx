@@ -61,7 +61,7 @@ export const TorusGeometryComponent = () => {
       </div>
       <div className={styles.demoMemo}>
         <p>
-          なんかデフォルト値で小数点つく様な値は基本触らなくてよいよ
+          ドーナツ型を指定できるジオメトリです
         </p>
       </div>
     </section>

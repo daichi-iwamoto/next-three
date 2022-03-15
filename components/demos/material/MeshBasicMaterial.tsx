@@ -52,7 +52,7 @@ export const MeshBasicMaterialComponent = () => {
       <div className={styles.demoMemo}>
         <p>
           光源を必要としないマテリアル<br />
-          テクスチャをつける事ができたりワイヤーフレームを表示したりできる。
+          テクスチャをつける事ができたりワイヤーフレームを表示したりできます
         </p>
       </div>
     </section>

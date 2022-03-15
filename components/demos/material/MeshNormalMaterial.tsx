@@ -50,7 +50,7 @@ export const MeshNormalMaterialComponent = () => {
       <div className={styles.demoMemo}>
         <p>
           こちらも光源を必要としないマテリアル<br />
-          面を表現したりワイヤーフレームを表示したりできる。
+          面を表現したりワイヤーフレームを表示したりすることができます
         </p>
       </div>
     </section>

@@ -66,7 +66,7 @@ export const PointLightComponent = () => {
       <div className={styles.demoMemo}>
         <p>
           豆電球の様なイメージの光源<br />
-          デフォルトでは原点に設置されるためポジションを変更して使用する事が多い
+          デフォルトでは原点に設置されるためポジションを変更して使用する事が多いです
         </p>
       </div>
     </section>

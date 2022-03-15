@@ -54,7 +54,7 @@ export const AnbientLightComponent = () => {
       <div className={styles.demoMemo}>
         <p>
           均一にジオメトリを照らすライト<br />
-          均一なので影や反射がつかない
+          均一なので影や反射がつきません
         </p>
       </div>
     </section>

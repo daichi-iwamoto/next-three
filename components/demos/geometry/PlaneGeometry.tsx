@@ -60,7 +60,9 @@ export const PlaneGeometryComponent = () => {
       </div>
       <div className={styles.demoMemo}>
         <p>
-          平面のジオメトリ、BoxGeometryとほぼ一緒、<code>Segments</code>は1でおk
+          平面を指定するジオメトリです<br />
+          指定できるプロパティは<code>BoxGeometry</code>とほぼ一緒で<code>Segments</code>は1にしておきましょう<br />
+          ゲーム等では良く地面の役割で使われることが多いようです
         </p>
       </div>
     </section>

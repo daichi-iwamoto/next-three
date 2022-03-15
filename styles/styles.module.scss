@@ -1,6 +1,22 @@
 .main {
   margin: 0;
   padding: 15px 35px;
+
+  header {
+    p {
+      text-align: center;
+
+      a {
+        text-decoration: underline;
+      }
+
+      code {
+        color: #0076ff;
+        font-weight: bold;
+        padding: 0 3px;
+      }
+    }
+  }
 }
 
 .title {
@@ -58,6 +74,10 @@
   border-top: solid 1px #19171c;
   margin: 0;
   position: relative;
+
+  p {
+    font-size: 0.9rem;
+  }
 
   code {
     color: #0076ff;

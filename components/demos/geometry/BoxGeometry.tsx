@@ -63,8 +63,9 @@ export const BoxGeometryComponent = () => {
       </div>
       <div className={styles.demoMemo}>
         <p>
-          <code>Segments</code>は面の粒度の様なもの<br />
-          BoxGeometryは面で構成されているので、基本的に1でOK
+          その名の通り立方体を指定するジオメトリです<br />
+          オプションで指定できる<code>Segments</code>は面の粒度の様なもので<br />
+          <code>BoxGeometry</code>は面で構成されているので、基本的に1でOKです
         </p>
       </div>
     </section>

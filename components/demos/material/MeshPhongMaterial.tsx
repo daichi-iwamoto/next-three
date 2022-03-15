@@ -59,7 +59,7 @@ export const MeshPhongMaterialComponent = () => {
       <div className={styles.demoMemo}>
         <p>
           物理ベースレンダリングで、光源を必要とするマテリアル<br />
-          光の反射率や、反射の色等を弄る事ができる
+          光の反射率や、反射の色等を指定することができます
         </p>
       </div>
     </section>

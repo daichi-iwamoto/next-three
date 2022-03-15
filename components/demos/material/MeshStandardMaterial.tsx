@@ -57,8 +57,8 @@ export const MeshStandardMaterialComponent = () => {
       <div className={styles.demoMemo}>
         <p>
           物理ベースレンダリングで、光源を必要とするマテリアル<br />
-          <code>roughness</code>は粗さを表し、1に近づくほどのっぺりする<br />
-          <code>metalness</code>は金属性を表し、1に近づくほど金属っぽくなる
+          <code>roughness</code>は粗さを表し、1に近づくほどのっぺりとなります<br />
+          <code>metalness</code>は金属性を表し、1に近づくほど金属っぽくなります
         </p>
       </div>
     </section>
