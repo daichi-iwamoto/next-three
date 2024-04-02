@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
 
-export const metadate: Metadata = {
+const metadate: Metadata = {
   title: "Next Three",
 };
 
