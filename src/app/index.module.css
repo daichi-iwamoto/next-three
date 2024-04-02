@@ -1,0 +1,136 @@
+.sm {
+  display: none;
+}
+
+@media (width <= 1000px) {
+  .sm {
+    display: block;
+  }
+}
+
+.main {
+  min-height: 100vh;
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+
+  .logo {
+    position: relative;
+    height: 300px;
+    width: 300px;
+  }
+
+  .title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 4rem;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .description a {
+    transition: 0.2s;
+    margin: 0 0.5rem;
+    color: rgb(159, 114, 255);
+  }
+
+  .description a:hover {
+    color: rgb(255, 144, 147);
+  }
+
+  .demoList {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: max-content;
+    align-items: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+
+    .demo {
+      padding: 1.5rem;
+      text-align: left;
+      color: inherit;
+      text-decoration: none;
+      border: solid 2px #000;
+      border-radius: 3px;
+      transition: color 0.15s ease, border-color 0.15s ease;
+      max-width: 300px;
+      height: 100%;
+      transition: 0.5s;
+    }
+
+    .demo:hover {
+      background: #000;
+      color: #fff;
+      box-shadow: 5px 5px 1px rgb(159, 114, 255),
+        -5px -5px 1px rgb(255, 144, 147);
+    }
+
+    .demo h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+}
+
+@media (width <= 1000px) {
+  .main {
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .logo {
+      position: relative;
+      height: 200px;
+      width: 200px;
+    }
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+
+    .demoList {
+      grid-template-columns: 1fr;
+
+      .demo {
+        padding: 0.5rem 1rem;
+      }
+
+      .demo h2 {
+        font-size: 1.2rem;
+      }
+
+      .demo p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .main {
+    background: #000;
+    color: #fff;
+
+    .demoList {
+      .demo {
+        border: solid 2px #fff;
+      }
+
+      .demo:hover {
+        background: #efefef;
+        color: #000;
+        border: solid 2px #efefef;
+      }
+    }
+  }
+}
